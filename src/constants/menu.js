@@ -5,7 +5,7 @@ export const menu = [
     icon: 'bx bxs-dashboard'
   },
   {
-    name: 'Yordamchi Ustozlar',
+    name: "O'qituvchilar",
     path: '/assistants',
     icon: 'bx bxs-graduation'
   },
@@ -23,5 +23,15 @@ export const menu = [
     name: "Yo'nalishlar",
     path: '/directions',
     icon: 'bx bx-directions'
+  },
+  {
+    name: 'Rating',
+    path: '/rating',
+    icon: 'bx bxs-star-half'
+  },
+  {
+    name: 'Settings',
+    path: '/settings',
+    icon: 'bx bx-cog'
   }
 ]

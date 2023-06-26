@@ -6,7 +6,7 @@ const store = useMenuStore()
 </script>
 
 <template>
-  <div class="antialiased h-screen bg-gray-200 dark:bg-gray-900">
+  <div class="antialiased h-screen bg-gray-200 dark:bg-gray-950">
     <div class="h-full">
       <Sidebar />
       <div
@@ -14,10 +14,7 @@ const store = useMenuStore()
         :class="store.get_menu ? 'sm:ml-20' : 'sm:ml-64'"
       >
         <div class="fixed bg-[#f18f35] h-[30%] w-full right-0 top-0"></div>
-        <div class="relative z-50">
-          <h1 class="text-9xl">
-            {{ store.menu_get }}
-          </h1>
+        <div class="relative z-50 h-[80vh]">
           <Header />
           <router-view></router-view>
         </div>

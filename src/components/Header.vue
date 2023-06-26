@@ -27,7 +27,7 @@ onMounted(() => {
 
 <template>
   <nav
-    class="z-50 w-full dark:bg-black/50 bg-white/50 rounded-xl border dark:border-gray-600 mb-10 shadow-xl"
+    class="z-50 w-full dark:bg-black/50 bg-white/50 rounded-xl border dark:border-gray-600 mb-5 shadow-xl"
   >
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
