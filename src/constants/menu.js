@@ -6,17 +6,17 @@ export const menu = [
   },
   {
     name: 'Yordamchi Ustozlar',
-    path: '/add-teacher',
+    path: '/assistants',
     icon: 'bx bxs-graduation'
   },
   {
     name: "O'quvchilar",
-    path: '/add-student',
+    path: '/students',
     icon: 'bx bx-user'
   },
   {
     name: 'Guruhlar',
-    path: '/add-student',
+    path: '/groups',
     icon: 'bx bx-group'
   },
   {

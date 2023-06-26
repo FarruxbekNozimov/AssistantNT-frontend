@@ -26,7 +26,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="z-50 w-full dark:bg-black/50 bg-white/50 rounded-xl border border-gray-600 mb-10">
+  <nav
+    class="z-50 w-full dark:bg-black/50 bg-white/50 rounded-xl border dark:border-gray-600 mb-10 shadow-xl"
+  >
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start">
@@ -54,16 +56,15 @@ onMounted(() => {
             </svg>
           </button>
           <router-link to="/" class="flex ml-2 md:mr-24">
-            <img src="/transparent_logo.png" class="h-10 mr-2 rounded-full" alt="FlowBite Logo" />
             <span
               class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
             >
-              NAJOT TA'LIM
+              DASHBOARD
             </span>
           </router-link>
         </div>
         <div class="flex items-center">
-          <div class="flex items-center ml-3">
+          <div class="flex items-center gap-5 ml-3">
             <div>
               <button
                 type="button"

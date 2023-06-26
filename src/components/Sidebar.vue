@@ -7,21 +7,17 @@ const store = useMenuStore()
 <template>
   <aside
     id="sidebar-multi-level-sidebar"
-    class="fixed left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r border-gray-300 dark:border-gray-600 shadow-xl bg-[#f18f35] duration-300"
     aria-label="Sidebar"
+    class="fixed left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r border-gray-300 dark:border-gray-600 shadow-xl bg-[#f18f35] duration-200"
     :class="store.get_menu ? 'w-20' : 'w-64'"
   >
     <div class="h-full overflow-y-auto bg-gray-100 dark:bg-black/90">
       <div class="flex items-center justify-start">
-        <a class="flex items-center justify-center w-full gap-3 py-5">
-          <img
-            src="/transparent_logo.png"
-            class="h-10 rounded-full dark:bg-white bg-black"
-            alt="FlowBite Logo"
-          />
+        <a href="/" class="flex items-center justify-center w-full gap-3 py-5">
+          <img src="/transparent_logo.png" class="h-10 rounded-full" alt="FlowBite Logo" />
           <span
             v-if="!store.get_menu"
-            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
+            class="self-center text-xl font-semibold font-mono sm:text-2xl whitespace-nowrap dark:text-white"
           >
             NAJOT TA'LIM
           </span>
@@ -39,7 +35,7 @@ const store = useMenuStore()
       </div>
     </div>
     <button
-      class="border border-gray-500 hover:bg-black rounded-lg flex items-center absolute bottom-5 px-2 p-1 left-5"
+      class="border border-gray-500 hover:bg-black rounded-lg flex items-center absolute bottom-5 px-2 p-1 left-5 hover:text-white"
       @click="store.changeMenu"
     >
       <i class="bx bx-menu-alt-left text-2xl dark:text-white"></i>
