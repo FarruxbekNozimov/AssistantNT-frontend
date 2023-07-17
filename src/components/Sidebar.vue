@@ -8,10 +8,10 @@ const store = useMenuStore()
   <aside
     id="sidebar-multi-level-sidebar"
     aria-label="Sidebar"
-    class="fixed left-0 z-50 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r border-gray-300 dark:border-gray-600 shadow-xl bg-[#f18f35] duration-200"
+    class="fixed left-0 z-50 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r border-gray-300 dark:border-gray-600 shadow-xl bg-zinc-900 duration-200"
     :class="store.get_menu ? 'w-20' : 'w-64'"
   >
-    <div class="h-full overflow-y-auto bg-gray-100 dark:bg-black/90">
+    <div class="h-full overflow-y-auto bg-gray-100 dark:bg-zinc-900">
       <div class="flex items-center justify-start">
         <a href="/" class="flex items-center justify-center w-full gap-3 py-5">
           <img src="/transparent_logo.png" class="h-10 rounded-full" alt="FlowBite Logo" />
@@ -35,7 +35,7 @@ const store = useMenuStore()
       </div>
     </div>
     <button
-      class="border border-gray-500 hover:bg-black rounded-lg flex items-center absolute bottom-5 px-2 p-1 left-5 hover:text-white"
+      class="border border-gray-500 hover:bg-black rounded-lg flex items-center absolute bottom-5 px-2 left-5 hover:text-white"
       @click="store.changeMenu"
     >
       <i
@@ -48,10 +48,6 @@ const store = useMenuStore()
 
 <style scoped>
 .router-link-exact-active {
-  background: #f18f35;
-  /* color: black; */
-}
-.router-link-exact-active:hover {
-  background: #f18f35;
+  background: rgb(153, 153, 153, 0.5);
 }
 </style>

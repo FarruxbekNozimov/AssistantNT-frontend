@@ -1,26 +1,26 @@
 export const menu = [
   {
-    name: 'Dashboard',
+    name: 'Home',
     path: '/',
     icon: 'bx bxs-dashboard'
   },
   {
-    name: "O'qituvchilar",
+    name: "Assistants",
     path: '/assistants',
     icon: 'bx bxs-graduation'
   },
   {
-    name: "O'quvchilar",
+    name: "Students",
     path: '/students',
     icon: 'bx bx-user'
   },
   {
-    name: 'Guruhlar',
+    name: 'Groups',
     path: '/groups',
     icon: 'bx bx-group'
   },
   {
-    name: "Yo'nalishlar",
+    name: "Directions",
     path: '/directions',
     icon: 'bx bx-directions'
   },

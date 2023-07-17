@@ -1,6 +1,9 @@
 <script setup>
 import { onMounted, onUpdated, ref } from 'vue'
 import { initDropdowns } from 'flowbite'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 
 const isDark = ref(JSON.parse(localStorage.getItem('mode')))
 const changeMode = () => {
@@ -27,9 +30,9 @@ onMounted(() => {
 
 <template>
   <nav
-    class="z-50 w-full dark:bg-black/50 bg-white/50 rounded-xl border dark:border-gray-600 mb-5 shadow-xl"
+    class="z-50 w-full dark:bg-zinc-900 bg-white rounded-xl border dark:border-gray-600 mb-5 shadow-xl"
   >
-    <div class="px-3 py-3 lg:px-5 lg:pl-3">
+    <div class="px-3 py-3 lg:px-5">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start">
           <button
@@ -55,13 +58,11 @@ onMounted(() => {
               ></path>
             </svg>
           </button>
-          <router-link to="/" class="flex ml-2 md:mr-24">
-            <span
-              class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
-            >
-              DASHBOARD
-            </span>
-          </router-link>
+          <span
+            class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
+          >
+            {{ route.name }}
+          </span>
         </div>
         <div class="flex items-center">
           <div class="flex items-center gap-5 ml-3">
@@ -73,15 +74,11 @@ onMounted(() => {
                 data-dropdown-toggle="dropdown-user"
               >
                 <span class="sr-only">Open user menu</span>
-                <img
-                  class="w-10 h-10 rounded-full"
-                  src="https://img.freepik.com/free-icon/arab_318-198038.jpg"
-                  alt="user photo"
-                />
+                <img class="w-10 h-10 rounded-full" src="/user.png" alt="user photo" />
               </button>
             </div>
             <div
-              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-zinc-800 dark:divide-gray-600"
               id="dropdown-user"
             >
               <div class="px-4 py-3" role="none">
@@ -103,7 +100,7 @@ onMounted(() => {
                       :checked="JSON.parse(isDark)"
                     />
                     <div
-                      class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+                      class="w-11 h-6 bg-gray-400 rounded-full dark:peer-focus:ring-black dark:bg-black peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:right-[22px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600"
                     ></div>
                   </label>
                 </li>
