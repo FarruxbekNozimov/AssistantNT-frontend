@@ -36,8 +36,8 @@ const topCards = [
       >
         <div class="pl-24 text-center">
           <i
-            class="absolute left-6 top-4 bx bxs-graduation text-7xl rounded-full px-2"
-            :class="el.color"
+            class="absolute left-5 top-3 text-6xl rounded-full p-3"
+            :class="el.color + ' ' + el.icon"
           ></i>
           <h2 class="text-2xl">{{ el.number }}</h2>
           <h1 class="text-2xl">{{ el.title }}</h1>
